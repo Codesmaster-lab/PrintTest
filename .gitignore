@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### Python ###
-/venv/
+*/venv/
