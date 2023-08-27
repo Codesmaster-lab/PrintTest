@@ -48,7 +48,7 @@ def consume_messages():
     queue_name = 'TestQueue'
     channel.queue_declare(queue=queue_name, durable=True)
 
-    # Set up the callback to handle received messages
+   
     channel.basic_consume(queue=queue_name, on_message_callback=callback, auto_ack=True)
 
     print("Waiting for messages. To exit press CTRL+C")
