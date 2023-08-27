@@ -40,5 +40,4 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-    - name: Render Deployment Trigerred
-      run: curl ${{secrets.RENDER_DEPLOY_HOOK}}
+
