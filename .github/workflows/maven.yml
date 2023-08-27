@@ -34,7 +34,7 @@ jobs:
     - name: Build & push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: sdec2000/printapp
+        image: sdec2000/core
         tags: latest
         registry: docker.io
         dockerfile: Dockerfile
