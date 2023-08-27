@@ -11,6 +11,7 @@ cloudamqp_url = 'amqps://sdpwqges:GoybPFCeHCxMjtk0eqSeAhEykG335zGL@puffin.rmq2.c
 
 def print_pdf(pdf_path):
     printer_name = win32print.GetDefaultPrinter()
+    #print the default printer
     print(printer_name)
 
        # Create a PDF reader object
