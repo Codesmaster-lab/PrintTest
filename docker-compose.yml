@@ -1,0 +1,6 @@
+version: '3'
+services:
+  printtest:
+    image: sdec2000/printapp:latest
+    ports:
+      - "8080:8080"
