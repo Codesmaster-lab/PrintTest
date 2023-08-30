@@ -34,7 +34,7 @@ jobs:
           QUEUE_NAME: TestQueue
           EXCHANGE: TestExchange
           ROUTING_KEY: fss
-      run: mvn clean package -DQUEUE_NAME="$QUEUE_NAME"
+      run: mvn clean package
     - name: Build & push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
