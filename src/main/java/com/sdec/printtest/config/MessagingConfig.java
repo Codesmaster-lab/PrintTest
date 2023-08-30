@@ -23,7 +23,8 @@ public class MessagingConfig {
     @Bean
     public Queue getQueue()
     {
-        Queue queue =new Queue(System.getenv("QUEUE_NAME"));
+        String q=System.getenv("QUEUE_NAME");
+        Queue queue =new Queue(q);
         return queue;
     }
     @Bean
