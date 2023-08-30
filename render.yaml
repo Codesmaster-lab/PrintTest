@@ -1,6 +1,6 @@
 services:
   - name: printapp
-    image: sdec2000/printapp:latest
+    image: docker.io/sdec2000/printapp:latest
     env:
       QUEUE_NAME: TestQueue
       EXCHANGE: TestExchange
