@@ -1,5 +1,6 @@
 services:
-  - name: printapp
+  - type: web
+    name: printapp
     image: docker.io/sdec2000/printapp:latest
     env:
       QUEUE_NAME: TestQueue
