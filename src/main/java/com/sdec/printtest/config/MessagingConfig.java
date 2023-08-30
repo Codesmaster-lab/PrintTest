@@ -16,16 +16,18 @@ import org.springframework.core.env.Environment;
 @Configuration
 public class MessagingConfig {
 
-    public static final String QUEUE = "TestQueue";
-    public static final String EXCHANGE = "TestExchange";
-    public static final String ROUTING_KEY = "fss";
+   // public static final String QUEUE = "TestQueue";
+   public static final String QUEUE = System.getenv("QUEUE_NAME");
+
+    //public static final String EXCHANGE = "TestExchange";
+    public static final String EXCHANGE = System.getenv("EXCHANGE");
+//    public static final String ROUTING_KEY = "fss";
+public static final String ROUTING_KEY = System.getenv("ROUTING_KEY");
 
     @Bean
     public Queue getQueue()
     {
-        String q=System.getenv("QUEUE_NAME");
-        System.out.println(q);
-        Queue queue =new Queue(q);
+        Queue queue =new Queue(QUEUE);
         return queue;
     }
     @Bean
