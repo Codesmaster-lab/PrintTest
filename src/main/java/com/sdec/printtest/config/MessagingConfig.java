@@ -16,9 +16,13 @@ import org.springframework.core.env.Environment;
 @Configuration
 public class MessagingConfig {
 
-    public static final String QUEUE = "TestQueue";
-    public static final String EXCHANGE = "TestExchange";
-    public static final String ROUTING_KEY = "fss";
+   // public static final String QUEUE = "TestQueue";
+   public static final String QUEUE = System.getenv("QUEUE_NAME");
+
+    //public static final String EXCHANGE = "TestExchange";
+    public static final String EXCHANGE = System.getenv("EXCHANGE");
+//    public static final String ROUTING_KEY = "fss";
+public static final String ROUTING_KEY = System.getenv("ROUTING_KEY");
 
     @Bean
     public Queue getQueue()
@@ -41,10 +45,10 @@ public class MessagingConfig {
     @Bean
     public RabbitTemplate setupConnectionAndGetaTemplate(){
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory("puffin.rmq2.cloudamqp.com");
-        connectionFactory.setUri("amqps://sdpwqges:GoybPFCeHCxMjtk0eqSeAhEykG335zGL@puffin.rmq2.cloudamqp.com/sdpwqges");
-        connectionFactory.setUsername("sdpwqges");
-        connectionFactory.setPassword("GoybPFCeHCxMjtk0eqSeAhEykG335zGL");
-        connectionFactory.setVirtualHost("sdpwqges");
+        connectionFactory.setUri(System.getenv("RABBITMQ_URL"));
+        connectionFactory.setUsername(System.getenv("RABBITMQ_USERNAME"));
+        connectionFactory.setPassword(System.getenv("RABBITMQ_PASSWORD"));
+        connectionFactory.setVirtualHost(System.getenv("RABBITMQ_USERNAME"));
 
         connectionFactory.setRequestedHeartBeat(30);
         connectionFactory.setConnectionTimeout(30000);
