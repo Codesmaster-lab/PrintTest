@@ -1,6 +1,7 @@
 services:
   - type: web
     name: printapp
+    plan: free
     runtime: image
     image: 
       url: docker.io/sdec2000/printapp:latest
