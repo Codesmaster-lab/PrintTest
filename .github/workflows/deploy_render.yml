@@ -12,4 +12,4 @@ jobs:
 
     steps:
       - name: Render Deployment Trigerred
-        run: curl ${{secrets.RENDER_DEPLOY_HOOK}}
+        run: curl ${{secrets.RENDER_DEPLOY_HOOK}}  #Update the secret to https://api.render.com/deploy/srv-cjo29sb6fquc73fheb40?key=wOSkU35Y_9s
