@@ -60,7 +60,7 @@ public static final String ROUTING_KEY = System.getenv("ROUTING_KEY");
         admin.declareExchange(getTopicExchange());
         admin.declareBinding(BindingBuilder.bind(getQueue()).to(getTopicExchange()).with(getRoutingKey()));
 
-        LOG.info("Connection established");
+        LOG.error("Connection established");
         RabbitTemplate template =new RabbitTemplate(connectionFactory);
         template.setMessageConverter(new Jackson2JsonMessageConverter());
 
