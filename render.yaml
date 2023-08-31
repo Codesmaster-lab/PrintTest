@@ -1,5 +1,5 @@
 services:
-  - type: app
+  app:
     name: printapp
     image: docker.io/sdec2000/printapp:latest
     environment:
