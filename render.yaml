@@ -1,11 +1,11 @@
 runtime: image
 image: 
  url: docker.io/sdec2000/printapp:latest
-env:
-  QUEUE_NAME: TestQueue
-  EXCHANGE: TestExchange
-  ROUTING_KEY: fss
-  RABBITMQ_URL: amqps://sdpwqges:GoybPFCeHCxMjtk0eqSeAhEykG335zGL@puffin.rmq2.cloudamqp.com/sdpwqges
-  RABBITMQ_USERNAME: sdpwqges
-  RABBITMQ_PASSWORD: GoybPFCeHCxMjtk0eqSeAhEykG335zGL
+# env:
+#   QUEUE_NAME: TestQueue
+#   EXCHANGE: TestExchange
+#   ROUTING_KEY: fss
+#   RABBITMQ_URL: amqps://sdpwqges:GoybPFCeHCxMjtk0eqSeAhEykG335zGL@puffin.rmq2.cloudamqp.com/sdpwqges
+#   RABBITMQ_USERNAME: sdpwqges
+#   RABBITMQ_PASSWORD: GoybPFCeHCxMjtk0eqSeAhEykG335zGL
    
